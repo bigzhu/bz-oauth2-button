@@ -43,8 +43,8 @@
 </template>
 
 <script>
-  import 'semantic-ui/dist/components/button.css'
-  import 'semantic-ui/dist/components/icon.css'
+  // import 'semantic-ui/dist/components/button.css'
+  // import 'semantic-ui/dist/components/icon.css'
   export default {
     props: ['oauths'],
     computed: {
