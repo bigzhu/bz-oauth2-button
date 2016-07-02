@@ -1,7 +1,8 @@
 {
   "name": "bz-oauth2-button",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "oauth2 button",
+  "main": "dist/main.js",
   "keywords": [
     "vue",
     "component",
@@ -16,6 +17,10 @@
     "url": "https://github.com/bigzhu/bz-oauth2-button/issues"
   },
   "homepage": "https://github.com/bigzhu/bz-oauth2-button#readme",
+  "files": [
+    "dist"
+  ],
+
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
