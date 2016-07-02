@@ -8,6 +8,14 @@
     "bigzhu"
   ],
   "author": "bigzhu <vermiliondun@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigzhu/bz-oauth2-button.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bigzhu/bz-oauth2-button/issues"
+  },
+  "homepage": "https://github.com/bigzhu/bz-oauth2-button#readme",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
