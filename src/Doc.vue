@@ -1,3 +1,5 @@
+<style lang=less>
+</style>
 <template>
   <div class="ui container segment">
     <h1>Oauth2</h1>
@@ -56,19 +58,4 @@
     }
   }
 </script>
-<style lang=less>
-  .original-text-bz {
-    /*保留空格*/
-    white-space: pre-wrap;
-    /*字体能自动换行*/
-    word-wrap:break-word;
-  }
-  code {
-    padding: 2px 4px;
-    font-size: 90%;
-    color: #c7254e;
-    background-color: #f9f2f4;
-    border-radius: 4px;
-    .original-text-bz;
-  }
-</style>
+

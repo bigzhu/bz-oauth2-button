@@ -36,7 +36,7 @@
 </style>
 
 <template>
-  <a v-for="oauth in oauths" @click="run($event, oauth)" href="getHref(oauth)" class="ui {{oauth}} button oauth">
+  <a v-for="oauth in oauths" @click="run($event, oauth)" :href="getHref(oauth)" class="ui {{oauth}} button oauth">
     <i class="{{oauth}} icon"></i>
     {{getName(oauth)}}
   </a>
