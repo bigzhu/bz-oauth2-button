@@ -44,7 +44,7 @@
 
 <script>
   export default {
-    props: ['oauths', 'url', 'call_back'],
+    props: ['oauths', 'url', 'function_name'],
     computed: {
 
     },
@@ -63,8 +63,8 @@
       run: function (e, oauth) {
         // show loading
         e.target.className += ' loading '
-        if (this.call_back) {
-          this.call_back('api_' + oauth)
+        if (this.function_name) {
+          window[this.function_name]('api_' + oauth)
         }
       },
       getName: function (oauth) {
@@ -75,7 +75,7 @@
         }
       },
       getHref: function (oauth) {
-        if (this.call_back) {
+        if (this.function_name) {
           return 'javascript:void(0);'
         }
         if (this.url) {
