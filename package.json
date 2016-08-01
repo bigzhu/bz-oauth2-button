@@ -1,6 +1,6 @@
 {
   "name": "bz-oauth2-button",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "bz-oauth2-button",
   "main": "dist/main.js",
   "keywords": [
