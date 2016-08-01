@@ -36,7 +36,7 @@
 </style>
 
 <template>
-  <a v-for="oauth in oauths" @click="loading" href="getHref(oauth)" class="ui {{oauth}} button oauth">
+  <a v-for="oauth in oauths" @click="run($event, oauth)" href="getHref(oauth)" class="ui {{oauth}} button oauth">
     <i class="{{oauth}} icon"></i>
     {{getName(oauth)}}
   </a>
@@ -44,7 +44,7 @@
 
 <script>
   export default {
-    props: ['oauths', 'url'],
+    props: ['oauths', 'url', 'call_back'],
     computed: {
 
     },
@@ -60,8 +60,12 @@
       upperFirst: function (string) {
         return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase()
       },
-      loading: function (e) {
+      run: function (e, oauth) {
+        // show loading
         e.target.className += ' loading '
+        if (this.call_back) {
+          this.call_back('api_' + oauth)
+        }
       },
       getName: function (oauth) {
         if (oauth === 'qq') {
@@ -71,6 +75,9 @@
         }
       },
       getHref: function (oauth) {
+        if (this.call_back) {
+          return 'javascript:void(0);'
+        }
         if (this.url) {
           return this.url + '/api_' + oauth
         } else {
