@@ -1,4 +1,4 @@
 module.exports = {
-  jquery: 'jQuery'
+  jQuery: 'jQuery'
 }
 

@@ -36,7 +36,7 @@
 </style>
 
 <template>
-  <a v-for="oauth in oauths" @click="loading" href="/api_{{oauth}}" class="ui {{oauth}} button oauth">
+  <a v-for="oauth in oauths" @click="loading" href="getHref(oauth)" class="ui {{oauth}} button oauth">
     <i class="{{oauth}} icon"></i>
     {{getName(oauth)}}
   </a>
@@ -44,8 +44,9 @@
 
 <script>
   export default {
-    props: ['oauths'],
+    props: ['oauths', 'url'],
     computed: {
+
     },
     components: {
     },
@@ -67,6 +68,13 @@
           return 'QQ'
         } else {
           return this.upperFirst(oauth)
+        }
+      },
+      getHref: function (oauth) {
+        if (this.url) {
+          return this.url + '/api_' + oauth
+        } else {
+          return '/api_' + oauth
         }
       }
     }
