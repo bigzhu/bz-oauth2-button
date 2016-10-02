@@ -36,25 +36,24 @@
 </style>
 
 <template>
-  <a v-for="oauth in oauths" @click="run($event, oauth)" :href="getHref(oauth)" class="ui {{oauth}} button oauth">
-    <i class="{{oauth}} icon"></i>
-    {{getName(oauth)}}
-  </a>
+  <div>
+    <a v-for="oauth in oauths" @click="run($event, oauth)" :href="getHref(oauth)" v-bind:class="'ui ' + oauth + ' button oauth'">
+      <i v-bind:class="oauth + ' icon'"></i>
+      {{getName(oauth)}}
+    </a>
+  </div>
 </template>
 
 <script>
   export default {
     props: ['oauths', 'url', 'function_name'],
     computed: {
-
     },
     components: {
     },
     data: function () {
       return {
       }
-    },
-    ready () {
     },
     methods: {
       upperFirst: function (string) {

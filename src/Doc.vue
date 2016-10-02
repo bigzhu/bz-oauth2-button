@@ -1,37 +1,25 @@
 <style lang=less>
 </style>
 <template>
-  <div class="ui container segment">
-    <h1>Oauth2</h1>
-    <p>
-      生成 Oauth2 按钮
-    </p>
-    <table class="ui celled table">
-      <thead>
-        <tr><th>参数</th><th>说明</th></tr>
-      </thead>
-      <tbody>
-        <tr v-for="parm in parms"> <td class="single line"> {{parm.parm}} </td> <td> {{parm.desc}} </td></tr>
-        <tr v-show="parms.length===0">
-          <td colspan="2"></td>
-        </tr>
-      </tbody>
-    </table>
-    <code v-text="code"></code>
-    <div class="ui divider"></div>
-    <oauth2 :oauths="oauths"></oauth2>
+  <div>
+    <doc :name="name"
+      :desc="desc"
+      :parm_desc="parm_desc"
+      :parms="parms"
+      :code="code"
+      >
+      <bz :oauths="oauths"></bz>
+    </doc>
   </div>
 </template>
 
 <script>
-  import 'semantic-ui/dist/components/site.css'
-  import 'semantic-ui/dist/components/reset.css'
-  import 'semantic-ui/dist/components/table.css'
-  import 'semantic-ui/dist/components/container.css'
-  import Oauth2 from './Bz.vue'
+  import Bz from './Bz.vue'
+  import Doc from 'bz-doc'
   export default {
     components: {
-      Oauth2
+      Bz,
+      Doc
     },
     data: function () {
       return {
@@ -45,6 +33,8 @@
           'github',
           'instagram'
         ],
+        name: 'bz-oauth2-button',
+        desc: '生成 Oauth2 按钮',
         parms: [
           {parm: 'oauths', desc: '一个list, 指定要显示的oauth方式:' + `['vk', 'twitter']`}
         ],
@@ -58,4 +48,3 @@
     }
   }
 </script>
-
