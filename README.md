@@ -1,6 +1,21 @@
 # bz-oauth2-button
 
-- 加入call_back, oauth 为参数
-    - 无法把外部定义的function传进来，只能用全局的了, 改为传 function_name
-- 可以指定 url， 用于 cordova app 登录
+> bz-oauth2-button
 
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# run all tests
+npm test
+```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

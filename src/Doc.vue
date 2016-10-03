@@ -1,5 +1,3 @@
-<style lang=less>
-</style>
 <template>
   <div>
     <doc :name="name"
@@ -48,3 +46,6 @@
     }
   }
 </script>
+
+<style>
+</style>
