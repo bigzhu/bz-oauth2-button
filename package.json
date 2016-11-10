@@ -1,6 +1,6 @@
 {
   "name": "bz-oauth2-button",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "bz-oauth2-button",
   "main": "dist/main.js",
   "keywords": [
@@ -25,8 +25,7 @@
     "build": "node build/pack.js",
     "test": ""
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "vue": "^2.0.1",
     "autoprefixer": "^6.4.0",
