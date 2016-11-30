@@ -2,7 +2,7 @@
   "name": "bz-oauth2-button",
   "version": "2.0.7",
   "description": "bz-oauth2-button",
-  "main": "dist/main.js",
+  "main": "src/Bz.vue",
   "keywords": [
     "vue",
     "component",
@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/bigzhu/bz-oauth2-button#readme",
   "files": [
-    "dist"
+    "src/Bz.vue",
+    "src/assets"
   ],
   "scripts": {
     "dev": "node build/dev-server.js",
