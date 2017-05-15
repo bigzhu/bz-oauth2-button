@@ -2,7 +2,6 @@
   <div>
     <doc :name="name"
       :desc="desc"
-      :parm_desc="parm_desc"
       :parms="parms"
       :code="code"
       >
@@ -46,6 +45,3 @@
     }
   }
 </script>
-
-<style>
-</style>
