@@ -1,6 +1,6 @@
 {
   "name": "bz-oauth2-button",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "bz-oauth2-button",
   "main": "src/Bz.vue",
   "keywords": [
